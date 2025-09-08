@@ -35,3 +35,11 @@ function trocarSecaoMenu(secao, sec) {
     document.querySelector(".vinho-section-sec.active").classList.toggle("active");
     document.querySelector(sec).classList.toggle("active");
 }
+
+function addFirstNft() {
+    document.getElementById("first-nft").style.display= "flex";
+}
+
+function addSecondNft() {
+    document.getElementById("second-nft").style.display= "flex";
+}

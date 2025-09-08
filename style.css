@@ -41,7 +41,7 @@ header nav ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50% , -80%);
 }
 
 .bar {
@@ -654,4 +654,54 @@ h1 {
     transform: translate(-50%, -50%);
     border-radius: 15px;
     overflow: hidden;
+}
+
+#nft .welcome {
+    background-image: url(assets/img/nftbg.png);
+}
+
+#nft .menu {
+    border-top: 2px solid black;
+    border-radius: 0;
+}
+
+.nftbox {
+    display: flex;
+    background-color: #D9D9D9;
+    margin: auto;
+    margin-top: 10px;
+    height: 40%;
+    width: 95%;
+    border: 2px solid black;
+}
+
+#first-nft {
+    display: none;
+}
+
+#second-nft {
+    display: none;
+}
+
+.nft-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nft-wrapper div {
+    width: 100%;
+}
+
+.nft-bottom-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-criterio, .bottom-price {
+    width: unset !important;
 }

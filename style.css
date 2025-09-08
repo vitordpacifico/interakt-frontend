@@ -1,0 +1,657 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-height: 100svh;
+}
+
+header {
+    height: 90px;
+    width: 100vw;
+    background-color: #C20000;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    border-bottom: 3px solid white;
+    position: relative;
+    z-index: 10;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    border-radius: 5px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    width: 100vw;
+    background-color: #DBDBDB;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 3px solid black;
+}
+
+.welcome {
+    height: 25svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: url('assets/img/welcome-bg.png');
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-12px);
+}
+
+.menu {
+    height: calc(75svh - 80px);
+    padding-bottom: 53px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    transform: translateY(-12px);
+    border-radius: 15px 15px 0 0;
+    border-top: 2px solid white;
+    padding-top: 5px;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.search-bar {
+    width: 80vw;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.options {
+    height: 85%;
+    overflow: scroll;
+}
+
+.option {
+    width: 95vw;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.option svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.tintos {
+    background-image: url('assets/img/tintos.png');
+}
+
+.brancos {
+    background-image: url('assets/img/brancos.png');
+}
+
+.rose {
+    background-image: url('assets/img/rose.png');
+}
+
+.licorizados {
+    background-image: url('assets/img/licorizados.png');
+}
+
+.section {
+    display: none;
+}
+
+.secao-ativa {
+    display: block;
+}
+
+.titulo-vinhos {
+    min-height: 22svh;
+    height: 22svh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-image: url('assets/img/tintos.png');
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-12px);
+    position: relative;
+}
+
+.chevron-back {
+    position: absolute;
+    top: 18%;
+    left: 5%;
+}
+
+.vinho-card-wrapper {
+    height: calc(78svh - 80px);
+    padding-bottom: 53px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    transform: translateY(-12px);
+    border-radius: 15px 15px 0 0;
+    border-top: 2px solid white;
+    padding-top: 5px;
+    overflow: scroll;
+}
+
+.vinho-card {
+    width: 95vw;
+    height: 23svh;
+    border: 2px solid #C20000;
+    margin: 10px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vinho-nome {
+    color: white;
+    background-color: #C20000;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.coracao svg {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: white;
+    height: 60%;
+}
+
+.vinho-content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.vinho-bandeira {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+}
+
+.fotos-vinho {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-vinho {
+    width: 65%;
+}
+
+.vinho-review {
+    flex: 1;
+    display: flex;
+    font-size: 9px;
+    height: 100%;
+    padding: 5px;
+}
+
+.avaliacao-geral {
+    width: 50%;
+    border-right: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avaliacao-geral p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comunidade {
+    width: 50%;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nota-vinho {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px;
+    border-bottom: 1px solid black;
+}
+
+.vinho-score {
+    font-size: 1.3rem;
+}
+
+.comunidade-user {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nome-user {
+    color: #C20000;
+    font-size: 11px;
+}
+
+.comunidade {
+    font-size: 10px;
+    text-align: center;
+}
+
+.comentarios-da-comunidade {
+    text-align: left;
+    font-style: italic;
+    font-size: 9px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+.fotos-vinho {
+    position: relative;
+    overflow: hidden;
+}
+
+.fotos-vinho::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    /* espessura da sombra */
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+#titulo-vinho-js {
+    width: 75%;
+    transform: translate(15px, 15px);
+    font-style: italic;
+}
+
+.titulo-vinhos.inside {
+    justify-content: left;
+    background-image: url(assets/img/paris.png);
+}
+
+#vinho-section {
+    flex-direction: column;
+    height: calc(100svh - 90px - 60px);
+}
+
+.vinho-section-body {
+    height: 65svh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.secao-ativa.flex {
+    display: flex;
+}
+
+.vinho-section-body-content {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    transform: translateY(-30px);
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.507);
+    padding: 25px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-wine {
+    position: absolute;
+    z-index: 9;
+    top: 17%;
+    right: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.floating-flag {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-130%);
+    height: 10%;
+}
+
+.floating-wine-img {
+    height: 25svh;
+}
+
+.vinho-section-avaliacao {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 3px;
+    border-bottom: 2px solid black;
+}
+
+.vinho-section-avaliacao h2 {
+    font-size: 2em;
+}
+
+.vinho-section-menu {
+    width: 100%;
+    height: 13%;
+    margin: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.vinho-menu-btn {
+    height: 90%;
+    width: 18%;
+    border-bottom: 3px solid #929292;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vinho-menu-btn.active {
+    height: 100%;
+    width: 22%;
+    border-bottom: 3px solid #C20000;
+}
+
+.vinho-menu-btn.active svg path {
+    fill: #C20000;
+}
+
+.vinho-menu-btn svg path {
+    fill: #929292;
+}
+
+.vinho-menu-btn img {
+    height: 55%;
+}
+
+.vinho-section-sec {
+    flex: 1;
+    display: none;
+    margin-top: 7px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.199);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.vinho-section-sec.active {
+    display: block;
+    overflow: scroll;
+}
+
+.especificacoes {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #C20000;
+}
+
+.info-linha {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+    height: 25%;
+    width: 100%;
+}
+
+.criterio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 47%;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.texto {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.cinza {
+    background-color: #f6f6f6;
+}
+
+.stars-linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+    height: 25%;
+    width: 100%;
+}
+
+.coins-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.coins-content {
+    flex: 1;
+}
+
+.nft-line {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nft-line p {
+    padding: 5px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.nft-line img {
+    width: 70%;
+}
+
+.text-nft-lines {
+    margin-top: 10px;
+}
+
+.text-nft-line {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.chave {
+    color: #929292;
+}
+
+.nft-info-text {
+    font-size: 9px;
+    text-align: center;
+    margin-top: 10px;
+    color: #929292;
+}
+
+.community-btn {
+    padding: 10px;
+    background-color: #C20000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.community-btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.half {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.half.right {
+    flex-direction: column;
+    height: 100%;
+    font-size: 14px;
+}
+
+.half.right .community-btn {
+    margin: 0;
+    padding: 5px;
+}
+
+.user-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 5px;
+    flex-direction: column;
+}
+
+.arroba {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.data-comentario {
+    font-size: 10px;
+    color: #929292;
+}
+
+.linha-comentario {
+    display: flex;
+    font-size: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#reader {
+    width: 300px;
+    margin: auto;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
+}
